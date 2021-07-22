@@ -1,3 +1,4 @@
+# Gerador de Cpf Aleatório
 from random import randint
 numero = str(randint(100000000, 999999999))
 
@@ -20,7 +21,7 @@ for index in range(19):
         total = 0
         novo_cpf += str(digito)
 
-
+# Validador do Cpf Criado Anterioramente.
 while True:
     cpf = novo_cpf
     novo_cpf = cpf[:-2]
@@ -42,7 +43,7 @@ while True:
             total = 0
             novo_cpf += str(digito)
 
-    protecao = novo_cpf == str(novo_cpf[0]) * len(cpf)
+    protecao = novo_cpf == str(novo_cpf[0]) * len(cpf)  # Proteção para não serem gerados números sequênciais. Ex: 888888888
 
     if cpf == novo_cpf and not protecao:
         print(f'O Cpf {novo_cpf} é Válido')
