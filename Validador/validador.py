@@ -46,7 +46,7 @@ while True:
     protecao = novo_cpf == str(novo_cpf[0]) * len(cpf)  # Proteção para não serem gerados números sequênciais. Ex: 888888888
 
     if cpf == novo_cpf and not protecao:
-        print(f'O Cpf {novo_cpf} é Válido')
+        print(f'O Cpf {novo_cpf} está Válido')
         break
     else:
         print(f'O Cpf {novo_cpf} é Inválido')
